@@ -41,15 +41,6 @@ spec:
       - name: example-app
         image: richarvey/nginx-php-fpm:latest
         imagePullPolicy: Always
-        env:
-          - name: SSH_KEY
-            value: '<YOUR_KEY_HERE>'
-          - name: GIT_REPO
-            value: 'git@gitlab.com:<YOUR_USER>/<YOUR_REPO>.git'
-          - name: GIT_EMAIL
-            value: '<YOUR_EMAIL>'
-          - name: GIT_NAME
-            value: '<YOUR_NAME>'
         ports:
         - containerPort: 80
 ```

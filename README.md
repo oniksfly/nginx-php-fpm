@@ -3,16 +3,16 @@
 ![Travis](https://img.shields.io/travis/ngineered/nginx-php-fpm.svg?style=flat-square)
 
 ## Overview
-This is a Dockerfile/image to build a container for nginx and php-fpm, with the ability to pull website code from git when the container is created, as well as allowing the container to push and pull changes to the code to and from git. The container also has the ability to update templated files with variables passed to docker in order to update your code and settings. There is support for lets encrypt SSL configurations, custom nginx configs, core nginx/PHP variable overrides for running preferences, X-Forwarded-For headers and UID mapping for local volume support.
+This is a Dockerfile/image to build a container for nginx and php-fpm.
+The container also has the ability to update templated files with variables passed to docker in order to update your code and settings. 
+There is support for lets encrypt SSL configurations, custom nginx configs, core nginx/PHP variable overrides for running preferences, X-Forwarded-For headers and UID mapping for local volume support.
 
 If you have improvements or suggestions please open an issue or pull request on the GitHub project page.
 
 ### Versioning
 | Docker Tag | GitHub Release | Nginx Version | PHP Version | Alpine Version |
 |-----|-------|-----|--------|--------|
-| latest | Master Branch |1.12.0 | 7.1.3 | 3.4 |
-
-For other tags please see: [versioning](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/versioning.md)
+| latest | Master Branch |1.13.1 | 5.6 | 3.4 |
 
 ### Links
 - [https://github.com/ngineered/nginx-php-fpm](https://github.com/ngineered/nginx-php-fpm)
@@ -28,10 +28,6 @@ To simply run the container:
 ```
 sudo docker run -d richarvey/nginx-php-fpm
 ```
-To dynamically pull code from git when starting:
-```
-docker run -d -e 'GIT_EMAIL=email_address' -e 'GIT_NAME=full_name' -e 'GIT_USERNAME=git_username' -e 'GIT_REPO=github.com/project' -e 'GIT_PERSONAL_TOKEN=<long_token_string_here>' richarvey/nginx-php-fpm:latest
-```
 
 You can then browse to ```http://<DOCKER_HOST>``` to view the default install files. To find your ```DOCKER_HOST``` use the ```docker inspect``` to get the IP address (normally 172.17.0.2)
 
@@ -44,11 +40,6 @@ For more detailed examples and explanations please refer to the documentation.
 - [Git Auth](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/git_auth.md)
  - [Personal Access token](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/git_auth.md#personal-access-token)
  - [SSH Keys](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/git_auth.md#ssh-keys)
-- [Git Commands](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/git_commands.md)
- - [Push](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/git_commands.md#push-code-to-git)
- - [Pull](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/git_commands.md#pull-code-from-git-refresh)
-- [Repository layout / webroot](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/repo_layout.md)
- - [webroot](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/repo_layout.md#src--webroot)
 - [User / Group Identifiers](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/UID_GID_Mapping.md)
 - [Custom Nginx Config files](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/nginx_configs.md)
  - [REAL IP / X-Forwarded-For Headers](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/nginx_configs.md#real-ip--x-forwarded-for-headers)
