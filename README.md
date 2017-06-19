@@ -1,6 +1,6 @@
-![docker hub](https://img.shields.io/docker/pulls/richarvey/nginx-php-fpm.svg?style=flat-square)
-![docker hub](https://img.shields.io/docker/stars/richarvey/nginx-php-fpm.svg?style=flat-square)
-![Travis](https://img.shields.io/travis/ngineered/nginx-php-fpm.svg?style=flat-square)
+![docker hub](https://img.shields.io/docker/pulls/onxsol/nginx-php-fpm.svg?style=flat-square)
+![docker hub](https://img.shields.io/docker/stars/onxsol/nginx-php-fpm.svg?style=flat-square)
+![Travis](https://img.shields.io/travis/onxsol/nginx-php-fpm.svg?style=flat-square)
 
 ## Overview
 This is a Dockerfile/image to build a container for nginx and php-fpm.
