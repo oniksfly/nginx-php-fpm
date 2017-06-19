@@ -32,6 +32,31 @@ sudo docker run -d onxsol/nginx-php-fpm
 You can then browse to ```http://<DOCKER_HOST>``` to view the default install files. To find your ```DOCKER_HOST``` use the ```docker inspect``` to get the IP address (normally 172.17.0.2)
 
 For more detailed examples and explanations please refer to the documentation.
+
+## Sample usage
+In your `Dockerfile`:
+```
+FROM onxsol/nginx-php-fpm:latest
+
+ENV WEBROOT /app
+
+RUN mkdir $WEBROOT
+WORKDIR $WEBROOT
+COPY . $WEBROOT
+VOLUME $WEBROOT
+
+EXPOSE 80
+
+STOPSIGNAL SIGTERM
+
+CMD ["/start.sh"]
+```
+
+Run them as usual:
+```
+docker run container_name
+```
+
 ## Documentation
 
 - [Building from source](https://github.com/ngineered/nginx-php-fpm/blob/master/docs/building.md)
