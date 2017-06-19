@@ -16,7 +16,7 @@ If you have improvements or suggestions please open an issue or pull request on 
 
 ### Links
 - [https://github.com/oniksfly/nginx-php-fpm](https://github.com/oniksfly/nginx-php-fpm)
-- [https://registry.hub.docker.com/u/richarvey/nginx-php-fpm/](https://hub.docker.com/r/onxsol/nginx-php-fpm/)
+- [https://hub.docker.com/r/onxsol/nginx-php-fpm/](https://hub.docker.com/r/onxsol/nginx-php-fpm/)
 
 ## Quick Start
 To pull from docker hub:
